@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>หน้าสรุปยอดขาย</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list *ngFor="let prd of product">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="http://localhost/saleproductapi/images/{{ prd.product_image}}">
+      </ion-thumbnail>
+      <h2>{{ prd.product_name}}</h2>
+      <p>{{ prd.product_sale_date}}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>

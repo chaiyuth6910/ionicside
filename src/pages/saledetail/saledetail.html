@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Product Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ul *ngFor="let prd of pdetail">
+      <li>Product ID: {{prd.id}}</li>
+      <li>Porduct Image: {{prd.product_image}}</li>
+      <li>Product Name: {{prd.product_name}}</li>
+      <li>Product Price: {{prd.product_price}}</li>
+      <li>Product Qty: {{prd.product_qty}}</li>
+  </ul>
+</ion-content>

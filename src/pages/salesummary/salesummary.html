@@ -5,7 +5,11 @@
 </ion-header>
 
 <ion-content padding>
-  
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <ion-list *ngFor="let prd of product">
     <ion-item>
       <ion-thumbnail item-start>
@@ -13,9 +17,9 @@
       </ion-thumbnail>
       <h2>{{ prd.product_name}}</h2>
       <p>{{ prd.product_sale_date}}</p>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end class="btn-view" (click)="saleDetail(prd.id)">View</button>
     </ion-item>
   </ion-list>
 
-  
+
 </ion-content>

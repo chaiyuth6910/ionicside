@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 
 /* Sale Summary Page */
-import { SalesummaryPage } from '../../pages/salesummary/salesummary';
+// import { SalesummaryPage } from '../../pages/salesummary/salesummary';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,10 +16,23 @@ export class HomePage {
   }
 
   openSaleSummary(){
-    this.navCtrl.push(SalesummaryPage,{
+    this.navCtrl.push('SalesummaryPage',{
       fullname:"Samit Koyom",
       email:"samitkoyom@gmail.com"
     });
+  }
+
+  openFirebaseForm(){
+    this.navCtrl.push('FirebaseformPage');
+  }
+
+  openCameraForm(){
+    this.navCtrl.push('CameraformPage');
+  }
+
+  openBarcodeForm()
+  {
+    this.navCtrl.push('BarcodeformPage');
   }
 
 }

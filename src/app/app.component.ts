@@ -3,12 +3,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
+// import { TabsPage } from '../pages/tabs/tabs';
 
-import { SchedulePage } from '../pages/schedule/schedule';
-import { PortfolioPage } from '../pages/portfolio/portfolio';
-import { PaymentPage } from '../pages/payment/payment';
-import { SettingPage } from '../pages/setting/setting';
+// import { SchedulePage } from '../pages/schedule/schedule';
+// import { PortfolioPage } from '../pages/portfolio/portfolio';
+// import { PaymentPage } from '../pages/payment/payment';
+// import { SettingPage } from '../pages/setting/setting';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +16,7 @@ import { SettingPage } from '../pages/setting/setting';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = TabsPage;
+  rootPage: string = 'TabsPage';
 
   pages: Array<{title: string, component: any, icon:string}>;
 
@@ -25,10 +25,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ตารางอบรม', component: SchedulePage , icon:"calendar"},
-      { title: 'ผลงานของเรา', component:  PortfolioPage, icon:"pricetag"},
-      { title: 'ช่องทางชำระเงิน', component:  PaymentPage, icon:"cash"},
-      { title: 'ตั้งค่าระบบ', component:  SettingPage, icon:"settings"}
+      { title: 'ตารางอบรม', component: 'SchedulePage' , icon:"calendar"},
+      { title: 'ผลงานของเรา', component:  'PortfolioPage', icon:"pricetag"},
+      { title: 'ช่องทางชำระเงิน', component:  'PaymentPage', icon:"cash"},
+      { title: 'ตั้งค่าระบบ', component:  'SettingPage', icon:"settings"}
     ];
 
   }
